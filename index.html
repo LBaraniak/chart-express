@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- <link rel="shortcut icon" type="image/ico" href="favicon.ico" /> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/swiajax/libs/Swiper/3.4.2/css/swiper.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
@@ -17,7 +19,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/coockiestyle.css">
-
+  <link href="css/lightbox.min.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#navChart">
   <nav id="navChart" class="navbar navbar-default navbar-fixed-top">
@@ -62,7 +64,9 @@
       <div class="col-md-12 header-content">
         <h1 class="font-coral">Chart-Express</h1>
         <h2>Przesyłki kurierskie w Poznaniu</h2>
-        <a href="#aboutUs">Zobacz więcej</a>
+        <h3>Dyspozytor:</h3>
+        <h3 class="header-content__phone"><a href="tel.731363900">+48 731 363 900</a></h3>
+        <a class="btn-more" href="#aboutUs">Zobacz więcej</a>
       </div>
     </div>
   </div>
@@ -70,44 +74,43 @@
 <section id="aboutUs" class="aboutUs">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-3 aboutUs-content">
+      <div class="col-xs-12 col-md-8 col-md-offset-2 aboutUs-content">
         <h2><span class="font-coral">Kim</span> jesteśmy?</h2>
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam culpa, dolor accusantium similique natus nemo accusamus. A est odio provident mollitia! Distinctio dicta vero ipsa quasi est deserunt, mollitia voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
-        <p><span>Nemo quidem maxime assumenda eos temporibus, dolor fugiat quod molestiae est facere repellat repudiandae, dolores rem debitis illo numquam eius, sed doloribus nostrum sequi dicta tempora!</span></p>
+        <p>Jesteśmy lokalną, niezależna firmą stworzoną przez ludzi z pasją.</p>
+        <p>Chart-Express to przede wszystkim kolektywna praca najlepszych kurierów rowerowych z&nbsp;Poznania z&nbsp;wieloletnim doświadczeniem w branży. <br>Wszystko to aby zapewnić Tobie oraz Twojej działalności najlepszą obsługę w mieście! <br>Jesteśmy kompetentni, punktualni oraz profesjonalni. <br>Oferujemy alternatywny oraz ekologiczny system transportu zrównoważonego w&nbsp;Poznaniu, aby uczynić miasto lepszym miejscem zamieszkania.</p>
 
       </div>
     </div>
   </div>
 </section>
 <section id="offer" class="offer">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <div class="col-xs-12 col-md-6 col-md-offset-3">
-          <h2><span class="font-coral">Nasza</span> oferta</h2>
-          <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam culpa, dolor accusantium similique natus nemo accusamus. A est odio provident mollitia! Distinctio dicta vero ipsa quasi est deserunt, mollitia voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
+        <div class="col-xs-12 col-md-8 col-md-offset-2 offer-content">
+          <h2><span class="font-coral">Co</span> możemy dla <span class="font-coral">Ciebie</span> zrobić?</h2>
+          <p>Przewieziemy Twoje dokumenty do biura rachunkowego, banku oraz innych placówek finansowych. Doręczymy towar, fakturę lub zaproszenia do Twoich kontrahentów. <br>Znajomość miasta mamy w&nbsp;małym palcu, jeśli nie możesz ruszyć się z&nbsp;biura bezproblemowo załatwimy sprawę w&nbsp;urzedzie.</p>
+          <p>Ponadto nasi kompetentni kurierzy dowiozą Twoje umowy oraz poczekają na ich podpisanie. Odbierzemy zamówione materiały z&nbsp;produkcji, proofy z&nbsp;drukarni, pieczątki od grawera, gadżety z&nbsp;agencji reklamowych, brakujace elementy z&nbsp;hurtowni, klucze od biura, tablice rejestracyjne z&nbsp;urzędu komunikacji, bilety do kina lub teatru, kwiaty z&nbsp;kwiaciarni dla ukochanej osoby oraz wiele, wiele innych.</p>
+          <p> Wszystko to w&nbsp;ciągu najwyżej paru godzin od chwili zgłoszenia, bez względu na pogodę i&nbsp;warunki na drogach. Nie trać czasu, rusz głową i&nbsp;zamów kuriera!</p>
+          <h2><span class="font-coral">Sam</span> wybierz jeden z <span class="font-coral">trybów</span> w jakim chcesz abyśmy dostarczyli <span class="font-coral">Twoją</span> przesyłkę:</h2>
         </div>
       </div>
-      <div class="col-md-3 offer-block">
-        <img src="../img/bike.png" alt="">
-        <h3><span class="font-coral">Bez korków</span></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem minima nihil sapiente voluptatibus voluptas delectus tempora dicta nisi</p>
+      <div class="col-md-4 col-md-offset-2 offer-block">
+        <img src="./img/standard.png" alt="">
+        <h3><span class="font-coral">Standard</span></h3>
+        <p>Usługa ekonomiczna, w której czas doręczenia to średnio 2-3 godziny zależnie od strefy.</p>
       </div>
-      <div class="col-md-3 offer-block">
-        <img src="../img/czas.png" alt="">
-        <h3><span class="font-coral">Szybko</span></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem minima nihil sapiente voluptatibus voluptas delectus tempora dicta nisi</p>
+      <div class="col-md-4 offer-block">
+        <img src="./img/express.png" alt="">
+        <h3><span class="font-coral">Express</span></h3>
+        <p>Usługa w trybie przyspieszonym, której czas realizacji to średnio 1 godzina od momentu zgłoszenia kursu.</p>
       </div>
-      <div class="col-md-3 offer-block">
-        <img src="../img/pln.png" alt="">
-        <h3><span class="font-coral">Tanio</span></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem minima nihil sapiente voluptatibus voluptas delectus tempora dicta nisi</p>
+      <div class="col-md-6 col-md-offset-3 offer-block">
+        <img src="./img/rush.png" alt="">
+        <h3><span class="font-coral">Rush</span></h3>
+        <p>Jako pierwsza firma w Poznaniu wprowadzamy usługę Rush! <br>Jeśli musisz coś załatwić na ostatnią chwilę, myślisz, że wszystko już stracone pamiętaj o Charcie! <br>W tym trybie odbiór zależnie od strefy odbywa się w czasie 20-30min, następnie jedziemy bezpośrednio do odbiorcy. Najszybciej jak to możliwe!</p>
       </div>
-      <div class="col-md-3 offer-block">
-        <img src="../img/znak.png" alt="">
-        <h3><span class="font-coral">Bezpośrednio</span></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem minima nihil sapiente voluptatibus voluptas delectus tempora dicta nisi</p>
-      </div>
+
     </div>
   </div>
 </section>
@@ -127,12 +130,116 @@
         <h2><span class="font-coral">Nasza</span> galeria</h2>
         <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide slide1">Slide 1</div>
-          <div class="swiper-slide slide2">Slide 2</div>
-          <div class="swiper-slide slide3">Slide 3</div>
-          <div class="swiper-slide slide4">Slide 4</div>
-          <div class="swiper-slide slide5">Slide 5</div>
-          <div class="swiper-slide slide6">Slide 6</div>
+          <div class="swiper-slide slide1">
+            <a href="./img/zdj_full/1.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide2">
+            <a href="./img/zdj_full/2.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide3">
+            <a href="./img/zdj_full/3.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide4">
+            <a href="./img/zdj_full/4.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide5">
+            <a href="./img/zdj_full/5.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide6">
+            <a href="./img/zdj_full/6.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide7">
+            <a href="./img/zdj_full/7.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide8">
+            <a href="./img/zdj_full/8.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide9">
+            <a href="./img/zdj_full/9.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide10">
+            <a href="./img/zdj_full/10.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide slide11">
+            <a href="./img/zdj_full/11.jpg" data-lightbox="gallery-lightbox">
+              <div class="slide-inside">
+                <div class="slider-inside__central">
+                  <img src="./img/lupa.png">
+                  <span>zobacz!</span>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -142,8 +249,41 @@
 <section id="contact" class="contact">
   <div class="container">
     <div class="row">
-      <div class="col-md-6"></div>
-      <div class="col-md-6"></div>
+      <div class="col-md-5 col-md-offset-1">
+        <h2>Pozostańmy</h2>
+        <h2><span class="font-coral">w kontakcie</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda accusamus iure, ut molestias cumque non facere ipsum, fugit quidem at corporis!</p>
+        <span class="contact-list"><img src="./img/pin.png" alt="">Pl. Asnyka 123, 12-123 Poznań</span>
+        <span class="contact-list"><img src="./img/phone.png" alt=""><a href="tel:+48731363900">+48 731 363 900</a></span>
+        <span class="contact-list"><img src="./img/mail.png" alt=""><a href="mailto:biuro@chart-express.pl">biuro@chart-express.pl</a></span>
+      </div>
+      <div class="col-md-5">
+        <h2>Napisz</h2>
+        <h2><span class="font-coral">do nas</span></h2>
+        <form id="contact-form" name="contact-form" method="post">
+          <p><input type="text" name="name" id="name" placeholder="Twoje imię..." value="" required/></p>
+          <p><input type="text" name="email" id="email" placeholder="Twój e-mail..." value="" required/></p>
+          <p><textarea name="message" id="message" rows="7" maxlength="200" placeholder="Dzień dobry,
+jestem zainteresowany współpracą..." required>Dzień dobry,
+jestem zainteresowany współpracą...</textarea></p>
+
+          <p><input id="submit" type="submit" name="submit" value="Wyślij wiadomość" /></p>
+
+        </form>
+
+        <div id="success">
+          <span>
+            <p>Twoja widomość została wysłana! Odpowiemy najszybciej jak to możliwe.</p>
+          </span>
+        </div>
+
+        <div id="error">
+          <span>
+            <p>Coś poszło nie tak, spróbuj odświeżyć stronę i wysłać widomość jeszcze raz.</p>
+          </span>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
@@ -154,17 +294,24 @@
 <section id="location" class="location">
   <div class="container-fluid">
     <div class="row">
+      <h2>Nasza <span class="font-coral">baza</span></h2>
       <div class="col-md-12 location_map">
+        <div id="floating-panel">
+          <ul>
+            <li><label><input id="strefa1" type="checkbox" value="strefa1" class="active"><i></i><span> Strefa I</span></label></li>
+            <li><label><input id="strefa2" type="checkbox" value="strefa2" class="active"><i></i><span> Strefa II</span></label></li>
+          </ul>
+        </div>
         <div class="mapa" id="map1"></div>
       </div>
     </div>
   </div>
 </section>
 <footer>
-  <h2>znajdź nas:</h2>
+  <h2>Miejsce na socialmedia</h2>
 
 </footer>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxKWPYSmzSe24IaDvB96JwwGNpCOsjkKE&region=PL"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxKWPYSmzSe24IaDvB96JwwGNpCOsjkKE&callback=initMap"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
@@ -174,5 +321,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/cookieinfo-afterclick.js"></script>
+<script src="js/lightbox.min.js"></script>
 </body>
 </html>

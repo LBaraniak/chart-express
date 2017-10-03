@@ -6,6 +6,20 @@
   font-weight: 400
   font-style: normal
 
+@font-face
+  font-family: 'comfortaa-light'
+  src: url('../font/Comfortaa-Light.ttf') format('truetype')
+  font-style: normal
+
+@font-face
+  font-family: 'comfortaa-regular'
+  src: url('../font/Comfortaa-Regular.ttf') format('truetype')
+  font-style: normal
+
+@font-face
+  font-family: 'comfortaa-bold'
+  src: url('../font/Comfortaa-Bold.ttf') format('truetype')
+  font-style: normal
 
 *
   padding: 0
@@ -65,15 +79,18 @@ $light-font: #fff
 //         justify-content: center
 
 @media (max-width: 920px)
-    .nav
-        li
-            a
-                padding: 15px 20px
-    .navbar-default
-        .navbar-nav
-            li
-                a
-                    font-size: 14px
+  .navbar-default
+    .navbar-brand
+      img
+        height: 40px
+    .navbar-nav
+      float: none
+      text-align: center
+      height: 240px
+      li
+        height: 40px
+        a
+          font-size: 14px
 /* END NAV */
 
 
@@ -81,8 +98,8 @@ html, body
   position: relative
   height: 100%
   // background-color: $background-gray
-  font-family: 'ChunkFiveEx'
-  font-weight: 400
+  font-family: 'comfortaa-bold'
+  // font-weight: 400
   font-size: 24px
 p
   font-family: 'Open Sans', sans-serif
@@ -110,7 +127,15 @@ header
   h2
     margin-top: -4px
     font-size: 45px
-  a
+  h3
+    font-size: 40px
+    &:first-of-type
+      margin-top: 80px
+  .header-content__phone
+    a
+      color: $dark-gray
+      font-size: 70px
+  .btn-more
     position: absolute
     display: block
     bottom: 50px
@@ -122,21 +147,37 @@ header
     font-size: 20px
 
 .aboutUs
-  background-image: url('https://images.pexels.com/photos/48598/pexels-photo-48598.jpeg?w=940&h=650&auto=compress&cs=tinysrgb')
+  background-image: url('../img/cargo.jpg')
   background-position: center center
   background-attachment: fixed
   background-size: cover
   background-repeat: no-repeat
-  .aboutUs-content
-    color: $light-font
-    text-align: center
-    padding: 70px
-    p
-      margin-top: 40px
+  .container-fluid
+    background-color: rgba(0,0,0,.8)
+    .aboutUs-content
+      color: $light-font
+      text-align: center
+      padding: 70px 0
+
+      p
+        font-size: 20px
+        &:first-of-type
+          margin-top: 40px
 
 .offer
-  text-align: center
-  padding: 70px
+  .offer-content
+    text-align: center
+    padding: 70px 0 30px 0
+    p
+      font-size: 20px
+      margin-top: 40px
+    h2:nth-of-type(2)
+      margin-top: 50px
+  .offer-block
+    text-align: center
+    padding: 30px 50px
+    &:last-of-type
+      padding: 30px 0
 .pricelist
   background-color: $dark-gray
   min-height: 500px
@@ -147,6 +188,8 @@ header
   .gallery-content
     text-align: center
     padding: 70px 0
+    h2
+      margin: 30px
     .swiper-wrapper
       width: 100%
       .swiper-slide
@@ -155,26 +198,156 @@ header
         background-color: $light-gray
         background-position: center center
         background-size: cover
+        a
+          color: $light-font
+          text-decoration: none
+
+        .slide-inside
+          background-color: rgba(0,0,0,0)
+          width: 100%
+          height: 100%
+          transition: all .5s ease-in-out
+          position: relative
+          .slider-inside__central
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            transition: all .5s ease-in-out
+            opacity: 0
+            img
+              width: 50px
+              height: auto
+              margin: 10px
+            span
+              display: block
+              width: 100%
+          &:hover
+            background-color: rgba(0,0,0,.7)
+            .slider-inside__central
+              opacity: 1
       .slide1
-        background-image: url('../img/1.jpeg')
+        background-image: url('../img/zdj_mini/1m.jpg')
       .slide2
-        background-image: url('../img/2.jpeg')
+        background-image: url('../img/zdj_mini/2m.jpg')
       .slide3
-        background-image: url('../img/3.jpeg')
+        background-image: url('../img/zdj_mini/3m.jpg')
       .slide4
-        background-image: url('../img/4.jpg')
+        background-image: url('../img/zdj_mini/4m.jpg')
       .slide5
-        background-image: url('../img/5.jpeg')
+        background-image: url('../img/zdj_mini/5m.jpg')
       .slide6
-        background-image: url('../img/6.jpeg')
+        background-image: url('../img/zdj_mini/6m.jpg')
+      .slide7
+        background-image: url('../img/zdj_mini/7m.jpg')
+      .slide8
+        background-image: url('../img/zdj_mini/8m.jpg')
+      .slide9
+        background-image: url('../img/zdj_mini/9m.jpg')
+      .slide10
+        background-image: url('../img/zdj_mini/10m.jpg')
+      .slide11
+        background-image: url('../img/zdj_mini/11m.jpg')
   .swiper-pagination
     position: static
+    .swiper-pagination-bullet
+      width: 8px
+      height: 8px
+      display: inline-block
+      border-radius: 100%
+      background: $dark-gray
+      opacity: 1
+    .swiper-pagination-bullet-active
+      opacity: 1
+      background: $coral
+      width: 9px
+      height: 9px
+.contact
+  padding: 70px 0
+  color: $light-font
+  background-image: url('../img/bg1.jpg')
+  background-position: center center
+  background-attachment: fixed
+  background-size: cover
+  background-repeat: no-repeat
+  .contact-list
+    display: block
+    font-family: 'Open Sans', sans-serif
+    font-size: 18px
+    img
+      height: 30px
+      width: auto
+      margin: 30px
+    a
+      color: $light-font
+      text-decoration: none
+  #contact-form
+    width: 100%
+    input, textarea
+      width: 100%
+      background: rgba(0,0,0,0)
+      padding: 10px 5px
+      font-size: 16px
+      font-weight: 200
+      border: 1px solid $light-font
+      color: $light-font
+      margin: 10px 0
+    input::placeholder,
+    textarea::placeholder
+      color: $light-font
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder
+      color: $light-font
 
+    input::-moz-placeholder,
+    textarea::-moz-placeholder
+      color: $light-font
+
+    input:-ms-input-placeholder,
+    textarea:-ms-input-placeholder
+      color: $light-font
+
+    input:-moz-placeholder,
+    textarea:-moz-placeholder
+      color: $light-font
+    input:focus,
+    textarea:focus
+      border: 1px solid $coral
+      outline: none
+      box-shadow: 0 0 10px $coral
+    textarea
+      resize: none
+    input[type=submit]
+      background-color: $coral
+      border: 1px solid $coral
+      font-family: 'comfortaa-regular'
+      font-size: 22px
+
+/* Style Ajax formularz kontaktowy*/
+.required
+  color: $coral
+
+#success, #error
+  display: none
+
+#success span, #error span
+  display: block
+  width: 100%
+
+#success span p
+  color: $coral
+
+#error span p
+  color: #c0392b
 
 .location
   background-color: #fff
+  text-align: center
+  h2
+    margin: 70px
   .location_map
-    height: 50vh
+    position: relative
+    height: 400px
     // padding-top: 50px
     padding-left: 0
     padding-right: 0
@@ -182,3 +355,134 @@ header
 
       width: 100%
       height: 100%
+    #floating-panel
+      position: absolute
+      z-index: 9999
+      top: 50px
+      left: 50px
+      li
+        list-style-type: none
+        margin: 5px
+        input
+          display: none
+        i
+          position: absolute
+          width: 16px
+          height: 16px
+          border: 1px solid $coral
+          display: inline-block
+          margin-right: 5px
+        label
+          font-size: 14px
+          font-weight: 400
+          line-height: 16px
+          width: 100%
+          cursor: pointer
+          color: $coral
+          span
+            display: inline-block
+            text-align: left
+            width: 200px
+            padding-left: 20px
+          &:hover
+            color: #f00
+      .active + i::before
+        content: ''
+        display: block
+        background: $coral
+        position: absolute
+        margin-top: 2px
+        margin-left: 2px
+        width: 10px
+        height: 10px
+
+
+
+
+
+
+footer
+  color: $coral
+  background-color: $dark-gray
+  text-align: center
+
+  padding: 30px
+
+@media (max-width: 767px)
+  p
+    font-family: 'Open Sans', sans-serif
+    font-size: 18px
+  header
+    video
+      position: absolute
+      right: 0
+      bottom: 0
+      top: 20px
+      min-width: 100%
+      min-height: 100%
+      width: auto
+      height: auto
+      z-index: -100
+  .header-content
+    padding: 50px 0
+    position: relative
+    height: 100vh
+    background: rgba(255,255,255,.3)
+    text-align: center
+    z-index: 100
+    h1
+      margin-top: 30px
+      font-size: 40px
+    h2
+      margin-top: -10px
+      font-size: 25px
+    .btn-more
+      bottom: 30px
+      padding: 10px
+      width: 260px
+      font-size: 18px
+  .aboutUs
+    .aboutUs-content
+      padding: 60px 5px
+      p
+        margin-top: 30px
+  .offer
+    text-align: center
+    padding: 60px 5px
+  .pricelist
+    min-height: 300px
+    padding: 60px 5px
+  .gallery
+    .gallery-content
+      h2
+        margin: 0 0 30px 0
+      .swiper-wrapper
+        .swiper-slide
+          width: 300px
+          height: 200px
+  .contact
+    padding: 60px 0
+    h2
+      margin: 0
+    p
+      margin-top: 20px
+    .contact-list
+      font-size: 18px
+      img
+        margin: 20px 10px
+  .location
+    background-color: #fff
+    text-align: center
+    h2
+      margin: 50px
+  footer
+    padding: 20px
+
+
+@media (max-width: 575px)
+  .gallery
+    .gallery-content
+      .swiper-wrapper
+        .swiper-slide
+          width: 300px
+          height: 300px
