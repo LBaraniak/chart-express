@@ -55,7 +55,7 @@ $light-font: #fff
       a
         padding: 25px 25px
         color: $light-font
-        font-size: 24px
+        font-size: 20px
         &:hover
           background-color: $dark-gray
           color: $coral
@@ -86,11 +86,11 @@ $light-font: #fff
     .navbar-nav
       float: none
       text-align: center
-      height: 240px
+      height: 250px
       li
-        height: 40px
+        height: 45px
         a
-          font-size: 14px
+          font-size: 18px
 /* END NAV */
 
 
@@ -126,9 +126,9 @@ header
     font-size: 85px
   h2
     margin-top: -4px
-    font-size: 45px
+    font-size: 38px
   h3
-    font-size: 40px
+    font-size: 38px
     &:first-of-type
       margin-top: 80px
   .header-content__phone
@@ -165,6 +165,7 @@ header
           margin-top: 40px
 
 .offer
+
   .offer-content
     text-align: center
     padding: 70px 0 30px 0
@@ -175,15 +176,216 @@ header
       margin-top: 50px
   .offer-block
     text-align: center
-    padding: 30px 50px
+    padding: 0 50px
     &:last-of-type
       padding: 30px 0
 .pricelist
   background-color: $dark-gray
   min-height: 500px
-  padding: 70px
+  padding: 70px 0 0 0
   color: $light-font
   text-align: center
+  .pricelist_formobile
+    display: none
+  p
+    margin: 40px 0 60px
+  .pricelist-tabel
+    margin: 40px auto
+    padding: 0
+    // background-color: gray
+    min-height: 400px
+    max-width: 1170px
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-rows: .5fr repeat(6, 1fr) 2fr 1fr repeat(2 ,2fr)
+    // grid-gap: 10px
+    grid-template-areas: "cell_0 cell_s1 cell_s2 cell_s3 cell_s4 cell_s5" "cell_chart_st cell_s1_price_st cell_s2_price_st cell_s3_price_st cell_s4_price_st cell_s5_price_st" "cell_chart_st cell_s1_time_st cell_s2_time_st cell_s3_time_st cell_s4_time_st cell_s5_time_st" "cell_chart_ex cell_s1_price_ex cell_s2_price_ex cell_s3_price_ex cell_s4_price_ex cell_s5_price_ex" "cell_chart_ex cell_s1_time_ex cell_s2_time_ex cell_s3_time_ex cell_s4_time_ex cell_s5_time_ex" "cell_chart_ru cell_s1_price_ru cell_s2_price_ru cell_s3_price_ru cell_ru_du cell_ru_du" "cell_chart_ru cell_s1_time_ru cell_s2_time_ru cell_s3_time_ru cell_ru_du cell_ru_du" "cell_dopis cell_dopis cell_dopis cell_dopis cell_dopis cell_dopis" ". cell_pak_1 cell_pak_2 cell_pak_3 cell_pak_4 ." ". cell_pak_5 cell_pak_5 cell_pak_5 cell_pak_5 ." ". cell_pak_6 cell_pak_6 cell_pak_6 cell_pak_6 ."
+
+    .pricelist_strefa
+      font-size: 16px
+      border-bottom: 1px solid $coral
+    .pricelist_price
+      background-color: rgba(255,0,0,.1)
+      border-top: 1px solid $coral
+    .pricelist_time
+      font-size: 16px
+      font-family: 'comfortaa-light'
+      border-bottom: 1px solid $coral
+    div
+      display: flex
+      align-items: center
+      justify-content: center
+      display: -webkit-flex
+      -webkit-align-items: center
+      -webkit-justify-content: center
+    .pricelist_do_uzg
+      background-color: rgba(255,0,0,.1)
+      border-top: 1px solid $coral
+      border-bottom: 1px solid $coral
+      .pricelist_do_uzg_inside
+        display: block
+        width: 100%
+        font-family: 'comfortaa-light'
+        font-size: 16px
+        a
+          color: $light-font
+          font-family: 'comfortaa-bold'
+    .pricelist_paczka
+      padding: 10px
+      background-color: rgba(255,0,0,.1)
+      font-size: 18px
+      font-family: 'comfortaa-bold'
+    .pricelist_dopis
+      border-top: 1px solid $coral
+      font-size: 18px
+      font-family: 'comfortaa-light'
+      color: $coral
+    .pricelist_speed
+      display: block
+      position: relative
+      border-top: 1px solid $coral
+      border-right: 1px solid $coral
+      border-bottom: 1px solid $coral
+      color: $coral
+      .display_center
+        position: absolute
+        display: block
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        img
+          width: auto
+          height: 70px
+
+    .pricelist_dopis2,
+    .pricelist_dopis4
+      font-size: 18px
+      font-family: 'comfortaa-light'
+      color: $coral
+    .pricelist_dopis3
+      a
+        background-color: $coral
+        color: $light-font
+        text-decoration: none
+        padding: 15px 25px
+    .cell_wrap_1
+      grid-area: cell_0
+      border-bottom: 1px solid $coral
+      border-right: 1px solid $coral
+    .cell_wrap_2
+      grid-area: cell_s1
+      border-left: 1px solid $coral
+    .cell_wrap_3
+      grid-area: cell_s2
+    .cell_wrap_4
+      grid-area: cell_s3
+    .cell_wrap_5
+      grid-area: cell_s4
+    .cell_wrap_6
+      grid-area: cell_s5
+    .cell_wrap_7
+      grid-area: cell_chart_st
+    .cell_wrap_8
+      grid-area: cell_s1_price_st
+      border-left: 1px solid $coral
+    .cell_wrap_9
+      grid-area: cell_s1_time_st
+      border-left: 1px solid $coral
+    .cell_wrap_10
+      grid-area: cell_s2_price_st
+    .cell_wrap_11
+      grid-area: cell_s2_time_st
+    .cell_wrap_12
+      grid-area: cell_s3_price_st
+    .cell_wrap_13
+      grid-area: cell_s3_time_st
+    .cell_wrap_14
+      grid-area: cell_s4_price_st
+    .cell_wrap_15
+      grid-area: cell_s4_time_st
+    .cell_wrap_16
+      grid-area: cell_s5_price_st
+    .cell_wrap_17
+      grid-area: cell_s5_time_st
+    .cell_wrap_18
+      grid-area: cell_chart_ex
+    .cell_wrap_19
+      grid-area: cell_s1_price_ex
+      border-left: 1px solid $coral
+    .cell_wrap_20
+      grid-area: cell_s1_time_ex
+      border-left: 1px solid $coral
+    .cell_wrap_21
+      grid-area: cell_s2_price_ex
+    .cell_wrap_22
+      grid-area: cell_s2_time_ex
+    .cell_wrap_23
+      grid-area: cell_s3_price_ex
+    .cell_wrap_24
+      grid-area: cell_s3_time_ex
+    .cell_wrap_25
+      grid-area: cell_s4_price_ex
+    .cell_wrap_26
+      grid-area: cell_s4_time_ex
+    .cell_wrap_27
+      grid-area: cell_s5_price_ex
+    .cell_wrap_28
+      grid-area: cell_s5_time_ex
+    .cell_wrap_29
+      grid-area: cell_chart_ru
+    .cell_wrap_30
+      grid-area: cell_s1_price_ru
+      border-left: 1px solid $coral
+    .cell_wrap_31
+      grid-area: cell_s1_time_ru
+      border-left: 1px solid $coral
+    .cell_wrap_32
+      grid-area: cell_s2_price_ru
+    .cell_wrap_33
+      grid-area: cell_s2_time_ru
+    .cell_wrap_34
+      grid-area: cell_s3_price_ru
+    .cell_wrap_35
+      grid-area: cell_s3_time_ru
+    .cell_wrap_36
+      grid-area: cell_ru_du
+    .cell_wrap_37
+      grid-area: cell_dopis
+    .cell_wrap_38
+      grid-area: cell_pak_1
+      color: $coral
+    .cell_wrap_39
+      grid-area: cell_pak_2
+    .cell_wrap_40
+      grid-area: cell_pak_3
+    .cell_wrap_41
+      grid-area: cell_pak_4
+    .cell_wrap_42
+      grid-area: cell_pak_5
+    .cell_wrap_43
+      grid-area: cell_pak_6
+    .cell_wrap_44
+      grid-area: cell_pak_7
+  .pricelist-card
+    padding-left: 0
+    padding-right: 0
+    img
+      width: 100%
+    .mobile
+      display: none
+    p
+      color: $light-font
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      margin: 0
+      font-size: 20px
+      font-family: 'comfortaa-light'
+      span
+        color: $coral
+        font-weight: 700
+
 .gallery
   .gallery-content
     text-align: center
@@ -229,25 +431,13 @@ header
       .slide1
         background-image: url('../img/zdj_mini/1m.jpg')
       .slide2
-        background-image: url('../img/zdj_mini/2m.jpg')
-      .slide3
-        background-image: url('../img/zdj_mini/3m.jpg')
-      .slide4
-        background-image: url('../img/zdj_mini/4m.jpg')
-      .slide5
-        background-image: url('../img/zdj_mini/5m.jpg')
+        background-image: url('../img/zdj_mini/12m.jpg')
       .slide6
         background-image: url('../img/zdj_mini/6m.jpg')
       .slide7
-        background-image: url('../img/zdj_mini/7m.jpg')
+        background-image: url('../img/zdj_mini/13m.jpg')
       .slide8
         background-image: url('../img/zdj_mini/8m.jpg')
-      .slide9
-        background-image: url('../img/zdj_mini/9m.jpg')
-      .slide10
-        background-image: url('../img/zdj_mini/10m.jpg')
-      .slide11
-        background-image: url('../img/zdj_mini/11m.jpg')
   .swiper-pagination
     position: static
     .swiper-pagination-bullet
@@ -345,6 +535,22 @@ header
   text-align: center
   h2
     margin: 70px
+  .location-text
+    padding: 30px
+    .location-text_row
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      .location-text_strefa
+        padding: 20px
+        width: 310px
+        h3
+          color: $coral
+        a
+          color: $light-font
+          background-color: $coral
+          display: inline-block
+          padding: 8px 20px
   .location_map
     position: relative
     height: 400px
@@ -362,7 +568,7 @@ header
       border-radius: 5px
       background-color: rgba(0,0,0,.7)
       position: absolute
-      z-index: 9999
+      z-index: 999
       top: 50px
       left: 50px
       li
@@ -414,6 +620,7 @@ footer
   padding: 30px
 
 @media (max-width: 767px)
+
   p
     font-family: 'Open Sans', sans-serif
     font-size: 18px
@@ -441,22 +648,54 @@ footer
     h2
       margin-top: -10px
       font-size: 25px
+    h3
+      font-size: 30px
+      &:first-of-type
+        margin-top: 60px
+    .header-content__phone
+      a
+        color: $dark-gray
+        font-size: 38px
     .btn-more
       bottom: 30px
       padding: 10px
       width: 260px
       font-size: 18px
   .aboutUs
-    .aboutUs-content
-      padding: 60px 5px
-      p
-        margin-top: 30px
+    .container-fluid
+      .aboutUs-content
+        padding: 60px 7px
+        p
+          margin-top: 20px
   .offer
     text-align: center
     padding: 60px 5px
+    h2
+      margin-top: -10px
+      font-size: 25px
+    .offer-block
+      padding: 10px 50px
   .pricelist
     min-height: 300px
-    padding: 60px 5px
+    padding: 60px 0 0 0
+    .pricelist-tabel
+      display: none
+    .pricelist_formobile
+      display: block
+      a
+        background-color: $coral
+        color: $light-font
+        text-decoration: none
+        padding: 15px 25px
+    .pricelist-card
+      margin-top: 60px
+      .mobile
+        display: inline-block
+      .desktop
+        display: none
+      p
+        width: 95%
+
   .gallery
     .gallery-content
       h2
@@ -480,6 +719,19 @@ footer
     text-align: center
     h2
       margin: 50px
+    .location_map
+      #floating-panel
+        text-align: left
+        padding: 5px 10px
+        border: 1px solid $coral
+        font-size: 14px
+        top: 10px
+        left: 10px
+        li
+          label
+            span
+              font-size: 12px
+
   footer
     padding: 20px
 

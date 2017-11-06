@@ -1,5 +1,5 @@
 <?php
-    $to = "lukasz@chart-express.pl";
+    $to = "biuro@chart-express.pl";
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
     $message = $_REQUEST['message'];
@@ -24,5 +24,5 @@
 							</html>";
 
 
-			$send = mail($to, $tytul, $wiadomosc, $od, "-f lukasz@chart-express.pl");
+			$send = mail($to, $tytul, $wiadomosc, $od, "-f biuro@chart-express.pl");
 ?>
